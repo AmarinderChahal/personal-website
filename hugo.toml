@@ -1,0 +1,36 @@
+# Production builds override this with the GitHub Pages URL (see
+# .github/workflows/deploy.yml). Set it to the custom domain once there is one.
+baseURL = "https://amarinderchahal.github.io/personal-website/"
+
+theme = 'hugo-bearblog'
+
+title = "Amarinder Chahal"
+author = "Amarinder Chahal"
+copyright = "Copyright © 2026, Amarinder Chahal."
+languageCode = "en-US"
+
+enableRobotsTXT = true
+
+# No /tags/ overview page; individual tag pages still render and are linked
+# from the blog index.
+disableKinds = ["taxonomy"]
+ignoreErrors = ["error-disable-taxonomy"]
+
+[params]
+  description = "Amarinder Chahal's blog."
+  favicon = "images/favicon.png"
+  images = ["images/share.png"]
+  title = "Amarinder Chahal"
+
+[markup]
+  [markup.highlight]
+    style = 'friendly'
+    lineNos = true
+    lineNumbersInTable = false
+    codeFences = true
+
+  # Allow raw HTML in Markdown so search.md and subscribe.md can embed the
+  # Pagefind UI and the Buttondown form without template overrides. Safe
+  # because the site owner is the only author.
+  [markup.goldmark.renderer]
+    unsafe = true
