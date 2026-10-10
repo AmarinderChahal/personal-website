@@ -1,0 +1,19 @@
+# Hugo build output
+/public/
+/resources/_gen/
+/assets/jsconfig.json
+.hugo_build.lock
+hugo_stats.json
+
+# Pagefind
+/public/pagefind/
+
+# Node
+node_modules/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
